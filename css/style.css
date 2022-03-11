@@ -1,0 +1,60 @@
+html, body {
+    min-height: 100%;
+    position: relative;
+    height: 800px;
+    background: linear-gradient(to bottom, #29B6F6, #90CAF9);
+    overflow: hidden;
+}
+
+.ground {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: url('../images/ground.png');
+    left:0;
+    bottom: -50px;
+    animation: ground 0.5s steps(5) infinite;
+}
+
+@keyframes ground {
+    100% {background-position: 100% 0;}
+}
+
+.cloud {
+    position: absolute;
+    width: 196px;
+    height: 99px;
+    background: url('../images/cloud.png');
+    top: 0;
+    left: 0;
+    animation: clouds 12s linear infinite;
+    transform: translateX(1000%);
+    /*animation-play-state: paused;*/
+}
+
+@keyframes clouds {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.cloud2 {
+    top: 100px;
+    animation: clouds 10s linear infinite;
+}
+
+.man {
+    width: 160px;
+    height: 260px;
+    background: url('../images/man.png');
+    position: absolute;
+    bottom: 75px;
+    z-index: 2;
+    animation: man 0.5s steps(5) infinite;
+    /*animation-play-state: paused;*/
+}
+
+@keyframes man {
+    100% {background-position: -100% 0;}
+}
+
